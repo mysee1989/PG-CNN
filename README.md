@@ -16,3 +16,4 @@ Building the ***multi_roi_pooling_layer*** with the related proto definition in 
 
 **Precautions**    
 The training and testing image list should be arranged as 
+<p style='color:red'>image_path expression_label point1_h point1_w pint2_h point2_w ...  point_24_h point24_w .</p>
