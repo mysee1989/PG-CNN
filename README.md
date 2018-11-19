@@ -1,5 +1,5 @@
 # PG-CNN
-Code for our ICPR 2018 paper: "Patch-Gated CNN for Occlusion-aware Facial Expression Recognition"
+Code for our ICPR 2018 paper: ["Patch-Gated CNN for Occlusion-aware Facial Expression Recognition"](http://vipl.ict.ac.cn/uploadfile/upload/2018092516364248.pdf)
 
 The following figure shows how we select the ciritcal points to crop patches from a facial image:
 ![alt text](https://github.com/mysee1989/PG-CNN/blob/master/img/point.png)   
@@ -12,8 +12,8 @@ The following figure shows how we select the ciritcal points to crop patches fro
 
 **Training yourself**   
 We designed caffe layer named by ***multi_roi_pooling_layer***. Currently the layer is provided with a GPU version.   
-Building the ***multi_roi_pooling_layer*** with the related proto definition in proto folder, you can adopt the network definition file in prototxt folder for training immediately.
+Building the ***multi_roi_pooling_layer*** with the related ***caffe.proto*** in proto folder, you can start training a model immediately.
 
 **Precautions**    
 The training and testing image list should be arranged as 
-<p style='color:red'>image_path expression_label point1_h point1_w pint2_h point2_w ...  point_24_h point24_w .</p>
+  image_path  expression_label  point1_h  point1_w  pint2_h point2_w  ...   point_24_h  point24_w   
