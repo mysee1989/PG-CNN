@@ -1,0 +1,112 @@
+#!/usr/bin/python
+import pdb
+import numpy as np
+
+
+def read_file(file_name):
+    res = []
+    with open(file_name) as fp:
+        for line in fp:
+            res.append(line.strip(' ').strip('\n').strip('\r'))
+    return res
+
+point_num = 0
+
+
+file_name = '68_pts.list'
+# img_17.jpg 2 77.296 68.9777 73.567 90.7539 73.6699 113.881 79.9589 136.925 88.602 159.343 96.9307 182.794 103.036 207.712 109.993 232.036 128.076 243.549 153.429 242.918 179.261 230.738 203.013 212.499 225.096 190.425 242.54 163.559 252.689 132.387 258.408 99.7858 261.177 68.0818 71.821 39.3796 78.2819 34.4547 88.2084 36.6252 98.1481 42.2743 106.693 50.228 135.723 49.4309 153.476 42.9695 173.333 40.9377 193.035 44.856 209.539 55.3789 117.967 72.6591 112.651 93.6165 106.934 113.757 101.112 134.238 93.4317 138.974 100.895 146.222 111.083 150.9 124.761 147.994 138.013 143.401 81.4451 64.0033 88.9698 59.1275 100.154 61.2914 109.243 71.2262 98.1165 72.3046 87.4698 70.5781 150.665 75.6852 162.124 66.8818 176.191 67.5268 189.706 73.9465 176.317 79.2318 162.724 78.8251 98.3533 168.282 99.1543 164.876 106.338 164.42 114.832 167.934 125.418 166.461 146.976 170.3 168.772 176.455 150.692 196.913 130.527 206.397 117.813 206.379 107.611 202.086 100.613 188.22 101.509 170.8 107.234 172.765 115.758 175.421 126.899 175.321 164.082 177.564 129.619 191.135 118.106 191.089 108.978 186.881 
+
+save_file = '24pts.list'
+# img_17.jpg 2 68 28 93 35 119 35 169 37 88 54 71 56 142 59 166 65 103 64 94 100 86 147 93 144 110 146 148 154 94 177 114 181 78 42 153 47 81 63 148 69 79 106 149 115 72 138 162 146
+
+
+pts_68_list = read_file(file_name)
+total_instance = len(pts_68_list) 
+
+def average_point(num1, num2, rescale_arr):
+    x1 = rescale_arr[num1*2-2]
+    y1 = rescale_arr[num1*2-1]
+    x2 = rescale_arr[num2*2-2]
+    y2 = rescale_arr[num2*2-1]
+    x = (x1+x2)/2
+    y = (y1+y2)/2
+    return x,y
+
+
+final_res = np.zeros([total_instance, 48], np.int32)
+final_file_name_label = []
+idx = 0
+
+point_num = 0
+for line in pts_68_list:
+    tmp = line.strip(' ').split(' ')
+    name_label = tmp[0:2]
+    final_file_name_label.append(name_label)
+    land_mark = tmp[2:]
+    rescale_arr = np.asarray(land_mark, np.float32)
+    #collect reslt
+    single = []
+    #au1: 22, 23
+    point = [19, 22, 23, 26,  39, 37, 44, 46, 28, 30, 49, 51, 53, 55, 59, 57]
+    double_point = [
+            [20, 38],
+            [25, 45],
+            [41, 42],
+            [47, 48],
+            [18, 59],
+            [27, 57]
+            ]
+    for ele in point:
+        single.append(rescale_arr[ele*2-2])
+        single.append(rescale_arr[ele*2-1]) # 6 point
+
+    for tmp_idx in range(0, 4):
+        # denote 
+        #single[tmp_idx*2+1] = single[tmp_idx*2+1] - 20
+        single[tmp_idx*2+1] = single[tmp_idx*2+1] - 10 
+
+    # refine 19, 26 idx = 0, 3
+        single[0*2+1] = single[0*2+1] + 2 
+        single[3*2+1] = single[3*2+1] + 2 
+
+    for ele in double_point:
+        x,y = average_point(ele[0], ele[1], rescale_arr)
+        single.append(x)
+        single.append(y) # 7 point
+
+    single.append(rescale_arr[49*2-2]-16)
+    single.append(rescale_arr[49*2-1]-16) # 15 point
+    single.append(rescale_arr[55*2-2]+16)
+    single.append(rescale_arr[55*2-1]-16) # 16 point
+    point_num = len(single)/2
+
+
+    result_arr = np.asarray(single, np.float32)
+    scale_single = (result_arr) * 224  /256.0;
+    rescale_single = scale_single + 0.5;
+    rescale_single.astype(int)
+    final_res[idx,:] = rescale_single
+    #final_res[idx,:] = result_arr
+    idx = idx + 1
+
+
+print('total point selected:'+str(point_num))
+
+row, col = final_res.shape
+
+
+with open(save_file, 'w') as fp:
+    for idx in range(0, total_instance):
+        name_label = final_file_name_label[idx]
+        for ele in name_label:
+            fp.write(ele)
+            fp.write(' ')
+        point = final_res[idx]
+        for inner_idx in range(0, point_num * 2):
+            fp.write(str(point[inner_idx]))
+            if inner_idx < point_num * 2 - 1:
+                fp.write(' ')
+        fp.write('\n')
+
+
+print('end, save file: ' + save_file)
