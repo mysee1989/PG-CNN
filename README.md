@@ -8,3 +8,11 @@ The following figure shows how we select the ciritcal points to crop patches fro
 (c) illustrates four points that are recomputed to better cover eyes and eyebrows   
 (d) displays four points that are re-computed to cover facial cheeks   
 (e) shows the selected 24 facial landmarks, around which the patches in (f) are cropped   
+
+
+**Training yourself**   
+We designed caffe layer named by ***multi_roi_pooling_layer***. Currently the layer is provided with a GPU version.   
+Building the ***multi_roi_pooling_layer*** with the related proto definition in proto folder, you can adopt the network definition file in prototxt folder for training immediately.
+
+**Precautions**    
+The training and testing image list should be arranged as 
