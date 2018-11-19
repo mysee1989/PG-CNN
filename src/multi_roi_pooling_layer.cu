@@ -4,7 +4,7 @@
 // Step:
 //      1, crop a sub-feature map with the shape of [1  c  pool_h  pool_w] according to the facial landmarks for each image
 //      2, for each branch, concatenate the N sub-feature map from the N images,
-//         to obtain the resulted feature map, with the shape of [N c pool_h pool_w]
+//         obtaining the resulted feature map, with the shape of [N c pool_h pool_w]
 
 // Details: when cropping the sub-feature map, we set 0 to the related coordinates of the croped feature map, 
 //          if the cropping index was checked to be smaller than 0 or larger than the spatial dimension of the input feature map.
