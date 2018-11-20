@@ -1,7 +1,7 @@
 # PG-CNN
 Code for our ICPR 2018 paper: ["Patch-Gated CNN for Occlusion-aware Facial Expression Recognition"](http://vipl.ict.ac.cn/uploadfile/upload/2018092516364248.pdf)
 
-The following figure shows how we select the ciritcal points to crop patches from a facial image:
+The following figure shows how we select the ciritcal points to crop the patches from a facial image:
 ![alt text](https://github.com/mysee1989/PG-CNN/blob/master/img/point.png)   
 (a) denotes totally 30 landmarks within original 68 facial landmarks. These points are involved in point selection   
 (b) shows 16 points that we pick to cover the facial regions on or around eyes, eyebrows, nose, mouth   
