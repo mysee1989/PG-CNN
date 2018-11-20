@@ -11,12 +11,12 @@ The following figure shows how we select the ciritcal points to crop the patches
 (e) shows the selected 24 facial landmarks, around which the patches in (f) are cropped   
 
 
-**Training yourself**       
-<br />We designed caffe layer named by ***multi_roi_pooling_layer***. Currently the layer is provided with a GPU version.   
-Building the ***multi_roi_pooling_layer*** with the related ***caffe.proto*** in proto folder, you can start training a model immediately.
+**Training yourself:**       
+&emsp;&emsp;&emsp;&emsp;We designed caffe layer named by ***multi_roi_pooling_layer***. Currently the layer is provided with a GPU version.   
+<br />Building the ***multi_roi_pooling_layer*** with the related ***caffe.proto*** in proto folder, you can start training a model immediately.
 
-<br />**Precautions**       
-<br />The training and testing image list should be arranged as:    
+<br />**Precautions:**       
+&emsp;&emsp;The training and testing image list should be arranged as:    
  &emsp;&emsp;&emsp;&emsp;image_path  expression_label  point1_h  point1_w  pint2_h point2_w  ...   point_24_h  point24_w   
- <br />An example of ***train.list*** has been provided in train_list_example folder.
- <br />We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder.
+ <br />&emsp;&emsp;An example of ***train.list*** has been provided in train_list_example folder.
+ <br />&emsp;&emsp;We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder.
