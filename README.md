@@ -17,6 +17,6 @@ The following figure shows how we select the ciritcal points to crop the patches
 
 <br />**Precautions:**       
 &emsp;&emsp;The training and testing image list should be arranged as:    
- &emsp;&emsp;&emsp;&emsp;image_path  expression_label  point1_h  point1_w  pint2_h point2_w  ...   point_24_h  point24_w   
+ &emsp;&emsp;&emsp;&emsp;image_path &emsp; expression_label &emsp; point1_h &emsp; point1_w &emsp; pint2_h &emsp; point2_w &emsp; ... &emsp;  point_24_h &emsp; point24_w   
  <br />&emsp;&emsp;An example of ***train.list*** has been provided in train_list_example folder.
  <br />&emsp;&emsp;We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder.
