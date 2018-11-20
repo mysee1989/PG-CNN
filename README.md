@@ -13,7 +13,7 @@ The following figure shows how we select the ciritcal points to crop the patches
 
 **Training yourself:**       
 &emsp;&emsp;We designed a caffe layer named as ***multi_roi_pooling_layer***. Currently the layer is provided with a GPU version.   
-<br />&emsp;&emsp;Building the ***multi_roi_pooling_layer*** with the related ***caffe.proto*** in proto folder, you can start training a model immediately.
+<br />&emsp;&emsp;Building the ***multi_roi_pooling_layer*** with the related ***caffe.proto*** in proto folder, you can start training a model &emsp;&emsp; immediately.
 
 <br />**Precautions:**       
 &emsp;&emsp;The training and testing image list should be arranged as:    
