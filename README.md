@@ -15,7 +15,7 @@ The following figure shows how we select the ciritcal points to crop patches fro
 Building the ***multi_roi_pooling_layer*** with the related ***caffe.proto*** in proto folder, you can start training a model immediately.
 
 **Precautions**       
-<br />The training and testing image list should be arranged as    
+<br />The training and testing image list should be arranged as:    
  <br />&emsp;&emsp;image_path  expression_label  point1_h  point1_w  pint2_h point2_w  ...   point_24_h  point24_w   
- <br />&emsp;A example train.list has been provided in train_list_example folder.
- <br />&emsp;We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder
+ <br />A example train.list has been provided in train_list_example folder.
+ <br />We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder.
