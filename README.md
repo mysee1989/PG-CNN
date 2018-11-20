@@ -22,5 +22,5 @@ The following figure shows how we select the ciritcal points to crop the patches
  &emsp;&emsp;&emsp;&emsp;image_path &emsp; expression_label &emsp; point1_h &emsp; point1_w &emsp; pint2_h &emsp; point2_w &emsp; ... &emsp;  point_24_h &emsp; point24_w   
  <br />&emsp;&emsp;An example of ***train.list*** has been provided in train_list_example folder.
  <br />&emsp;&emsp;We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder.
- <br />**Dateset resource:**
- <br /><br /><br />We collected and labelled a facial expression dataset in the presence of real occlusions: FED-RO. [download link](https://1drv.ms/u/s!AjMhxexGSrsZgQEy31L0HDGnXJjZ)
+ <br /><br /><br />**Dateset resource:**
+ <br />&emsp;&emsp;We collected and labelled a facial expression dataset in the presence of real occlusions: FED-RO. [download link](https://1drv.ms/u/s!AjMhxexGSrsZgQEy31L0HDGnXJjZ)
