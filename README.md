@@ -1,6 +1,7 @@
 # PG-CNN
 By Yong Li, Jiabei Zeng, Shiguang Shan, Xilin Chen
 <br /><br /> News! 2019/02/25.  We add the model config of paper: ["Occlusion aware facial expression recognition using CNN with attention mechanism"](https://ieeexplore.ieee.org/abstract/document/8576656). All the details can be found in ***prototxt/gACNN_train.prototxt***.
+
 <br />Code for our ICPR 2018 paper: ["Patch-Gated CNN for Occlusion-aware Facial Expression Recognition"](http://vipl.ict.ac.cn/uploadfile/upload/2018092516364248.pdf). We designed a Patch-Gated CNN that can percept and ignore the occlusions for facial expression recognition. All the details can be found in ***prototxt/pACNN_train.prototxt***. 
 <br />Note that the code is based on [caffe](https://github.com/BVLC/caffe), a famous deep learning framework.
 
