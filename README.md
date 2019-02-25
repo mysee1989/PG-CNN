@@ -1,4 +1,4 @@
-# PG-CNN
+# PG-CNN and its TIP version
 By Yong Li, Jiabei Zeng, Shiguang Shan, Xilin Chen
 <br /><br /> News! 2019/02/25.  We add the model config of paper: ["Occlusion aware facial expression recognition using CNN with attention mechanism"](https://ieeexplore.ieee.org/abstract/document/8576656). All the details can be found in ***prototxt/gACNN_train.prototxt***.
 
