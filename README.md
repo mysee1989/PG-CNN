@@ -31,11 +31,11 @@ The following figure shows how we select the ciritcal points to crop the patches
 ## Citation: If you use this code in your paper, please cite the following:
 ```
 @inproceedings{zhao2016deep,
-  <br />title={Patch-Gated CNN for Occlusion-aware Facial Expression Recognition},
-  <br />author={Li, Yong and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
-  <br />booktitle={ICPR},
-  <br />year={2018}
-<br />}
+  title={Patch-Gated CNN for Occlusion-aware Facial Expression Recognition},
+  author={Li, Yong and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
+  booktitle={ICPR},
+  year={2018}
+}
 ```
 
 ```
