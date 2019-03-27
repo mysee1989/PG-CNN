@@ -40,11 +40,12 @@ The following figure shows how we select the ciritcal points to crop the patches
 
 ```
 @article{li2019occlusion,
-title={Occlusion Aware Facial Expression Recognition Using CNN With Attention Mechanism},
-author={Li, Y and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
-journal={IEEE Transactions on Image Processing},
-volume={28},
-number={5},
-pages={2439--2450},
-year={2019}}
+  title={Occlusion Aware Facial Expression Recognition Using CNN With Attention Mechanism},
+  author={Li, Y and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
+  journal={IEEE Transactions on Image Processing},
+  volume={28},
+  number={5},
+  pages={2439--2450},
+  year={2019}
+}
 ```
