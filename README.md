@@ -29,12 +29,12 @@ The following figure shows how we select the ciritcal points to crop the patches
 <br />&emsp;&emsp;Alternative [download link](https://pan.baidu.com/s/1kLKkClTnrbfY9hJr6shkHQ) based on Baidu Yun. Extraction code: o5di
 
 # Citation: If you use this code in your paper, please cite the following:
-<table><tr><td bgcolor=orange>@inproceedings{zhao2016deep,
-  title={Patch-Gated CNN for Occlusion-aware Facial Expression Recognition},
-  author={Li, Yong and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
-  booktitle={ICPR},
-  year={2018}
-}</td></tr></table>
+<table><tr><td bgcolor=orange><br />@inproceedings{zhao2016deep,
+  <br />title={Patch-Gated CNN for Occlusion-aware Facial Expression Recognition},
+  <br />author={Li, Yong and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
+  <br />booktitle={ICPR},
+  <br />year={2018}
+<br />}</td></tr></table>
 
 @article{li2019occlusion,
 title={Occlusion Aware Facial Expression Recognition Using CNN With Attention Mechanism},
