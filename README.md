@@ -28,8 +28,8 @@ The following figure shows how we select the ciritcal points to crop the patches
  <br />&emsp;&emsp;We collected and labelled a facial expression dataset (***FED-RO***) in the presence of real occlusions: . [download link](https://1drv.ms/u/s!AjMhxexGSrsZgQEy31L0HDGnXJjZ)
 <br />&emsp;&emsp;Alternative [download link](https://pan.baidu.com/s/1kLKkClTnrbfY9hJr6shkHQ) based on Baidu Yun. Extraction code: o5di
 
-# Citation: If you use this code in your paper, please cite the following:
-<table><tr><td bgcolor=orange><br />@inproceedings{zhao2016deep,
+## Citation: If you use this code in your paper, please cite the following:
+<table><tr><td bgcolor=blue><br />@inproceedings{zhao2016deep,
   <br />title={Patch-Gated CNN for Occlusion-aware Facial Expression Recognition},
   <br />author={Li, Yong and Zeng, Jiabei and Shan, Shiguang and Chen, Xilin},
   <br />booktitle={ICPR},
