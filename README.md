@@ -26,4 +26,4 @@ The following figure shows how we select the ciritcal points to crop the patches
  <br />&emsp;&emsp;We provided a python script to convert 68 facial landmarks to desired 24 points, the file locate in ***convert_point*** folder.
  <br /><br /><br />**Dateset resource:**
  <br />&emsp;&emsp;We collected and labelled a facial expression dataset (***FED-RO***) in the presence of real occlusions: . [download link](https://1drv.ms/u/s!AjMhxexGSrsZgQEy31L0HDGnXJjZ)
-<br />&emsp;&emsp;Alternative download [link](https://pan.baidu.com/s/1kLKkClTnrbfY9hJr6shkHQ) based on Baidu Yun. Extraction code: o5di
+<br />&emsp;&emsp;Alternative [download link](https://pan.baidu.com/s/1kLKkClTnrbfY9hJr6shkHQ) based on Baidu Yun. Extraction code: o5di
